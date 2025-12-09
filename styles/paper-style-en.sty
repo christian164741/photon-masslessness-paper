@@ -1,0 +1,95 @@
+% =============================================================
+% paper-style-en.sty — English layout for 6×9 in papers
+% Author: Christian Weilharter
+% Series: Theoretical Physics – Derivations in Historical Context
+% =============================================================
+
+\ProvidesPackage{paper-style-en}[2025/10/27 EN layout + box system]
+
+% -------------------------------------------------------------
+% Geometry – 6×9 in page setup
+% -------------------------------------------------------------
+\usepackage[paperwidth=6in, paperheight=9in,
+inner=0.85in, outer=0.95in,
+top=0.95in, bottom=0.95in]{geometry}
+
+% -------------------------------------------------------------
+% Core packages
+% -------------------------------------------------------------
+\usepackage{amsmath,amssymb,bm}
+\usepackage{siunitx}
+
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage[nameinlink,noabbrev]{cleveref}
+\usepackage[most]{tcolorbox}
+\usepackage{microtype}
+\usepackage{titlesec}
+\usepackage[font=small,labelfont=bf]{caption}
+% --- Mathematisches & Grafiken ---
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{patterns}
+\usepackage{pgfplots}
+%\usepackage{tcolorbox}
+\usepackage{xcolor}
+\usepackage[makeroom]{cancel}
+
+% -------------------------------------------------------------
+% Typographic setup
+% -------------------------------------------------------------
+\setlist{nosep}
+\setlength{\parskip}{0.8em}
+\setlength{\parindent}{0pt}
+\sloppy
+
+% -------------------------------------------------------------
+% Hyperlink appearance
+% -------------------------------------------------------------
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	urlcolor=blue,
+	citecolor=blue,
+	pdfproducer={LaTeX with paper-style-en.sty},
+	pdfcreator={Christian Weilharter}
+}
+
+% -------------------------------------------------------------
+% Section formatting
+% -------------------------------------------------------------
+\titleformat{\section}{\normalfont\Large\bfseries}{\thesection.}{0.5em}{}
+\titleformat{\subsection}{\normalfont\large\bfseries}{\thesubsection}{0.5em}{}
+\titleformat{\subsubsection}{\normalfont\normalsize\bfseries}{\thesubsubsection}{0.5em}{}
+
+% -------------------------------------------------------------
+% tcolorbox – Photon look, English names
+% -------------------------------------------------------------
+\tcbset{
+	enhanced,
+	boxrule=0.6pt,
+	arc=2mm,
+	left=6pt, right=6pt, top=6pt, bottom=6pt,
+	fonttitle=\bfseries,
+	before skip=10pt, after skip=10pt,
+}
+
+\tcbset{physicsbox/.style={ colback=blue!5!white,   colframe=blue!75!black,   fonttitle=\bfseries}}
+\tcbset{mathbox/.style={    colback=green!5!white,  colframe=green!50!black,  fonttitle=\bfseries}}
+\tcbset{didacticbox/.style={colback=yellow!5!white, colframe=yellow!50!black, fonttitle=\bfseries}}
+\tcbset{hypobox/.style={    colback=orange!5!white, colframe=orange!75!black, fonttitle=\bfseries}}
+\tcbset{notebox/.style={    colback=gray!10!white,  colframe=red!60!black,  fonttitle=\bfseries}}
+\tcbset{historybox/.style={ colback=brown!5!white,  colframe=brown!60!black,  fonttitle=\bfseries}}
+
+% Convenient wrappers
+\newenvironment{PhysicsBox}[1][]{\begin{tcolorbox}[physicsbox,title={#1}]}{\end{tcolorbox}}
+\newenvironment{MathBox}[1][]{\begin{tcolorbox}[mathbox,title={#1}]}{\end{tcolorbox}}
+\newenvironment{DidacticBox}[1][]{\begin{tcolorbox}[didacticbox,title={#1}]}{\end{tcolorbox}}
+\newenvironment{HypoBox}[1][]{\begin{tcolorbox}[hypobox,title={#1}]}{\end{tcolorbox}}
+\newenvironment{NoteBox}[1][]{\begin{tcolorbox}[notebox,title={#1}]}{\end{tcolorbox}}
+\newenvironment{HistoryBox}[1][]{\begin{tcolorbox}[historybox,title={#1}]}{\end{tcolorbox}}
+
+% -------------------------------------------------------------
+% End of file
+% -------------------------------------------------------------

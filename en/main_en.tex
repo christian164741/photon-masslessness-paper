@@ -1,0 +1,223 @@
+% =============================================================
+% Paper Template (LaTeX) – "Derivations in Historical Context"
+% Author: Christian Weilharter
+% Series: Theoretical Physics – Derivations
+% Purpose: 6×9 in (KDP/Print) + EPUB-compatible PDF (Apple Books)
+% =============================================================
+\documentclass[12pt,oneside]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{../styles/paper-style-en}
+
+% ---- Literatur (BibLaTeX/Biber) ----
+\usepackage[backend=biber,style=numeric,sorting=nyt]{biblatex}
+\renewcommand*{\bibfont}{\small}
+\addbibresource{../bib/literatur.bib}
+% =============================================================
+% Series and publication metadata
+% =============================================================
+\newcommand{\SeriesTitle}{Theoretical Physics – Derivations in Historical Context\par}
+ 
+\newcommand{\PaperTitle}{\LARGE\textbf{Why the Photon Must Be (Almost) Massless}\\[0.4em]
+	{\large From Gauge Symmetry to Astrophysical Limits\par}}
+
+
+
+\newcommand{\PaperAuthor}{Christian Weilharter}
+\newcommand{\PaperDate}{October 26, 2025}
+
+\newcommand{\PaperDOI}{\emph{DOI (Zenodo)}: \texttt{10.5281/zenodo.xxxxxxx}}
+\newcommand{\PaperISBNPDF}{\emph{ISBN (Print)}: 978-3-xxxx-xxxx-x}
+\newcommand{\PaperISBNEPUB}{\emph{ISBN (E-Book)}: 978-3-xxxx-xxxx-x}
+\newcommand{\PaperKeywords}{photon mass, gauge symmetry, Proca theory, quantum electrodynamics, astrophysical limits, photon helicity
+}
+
+% ---------- Metadata block ----------
+\newcommand{\PaperMetadata}{
+	\vspace{1em}
+	\begin{flushleft}
+		\small
+		\setlength{\parskip}{3pt}
+		\noindent\PaperDOI\\
+	%	\PaperISBNPDF\\
+		\PaperISBNEPUB\\
+		\textit{Keywords:} \PaperKeywords
+	\end{flushleft}
+	\vspace{1em}
+}
+
+% =============================================================
+% Title
+% =============================================================
+
+
+\begin{document}
+	\thispagestyle{empty}
+	
+	\begin{titlepage}
+	\begin{center}
+		
+	
+		
+		\vspace*{1.8cm}
+		
+		% --- TITLE ---
+			\PaperTitle 
+	
+		% --- Series Title: viel näher dran! ---
+		\vspace{0.6cm}
+	
+    %	{\large\textit\SeriesTitle }
+		% \vspace{1.6cm}
+		
+		% --- AUTHOR ---
+	
+	    {\Large\PaperAuthor}
+		\vspace{0.65cm}
+		
+		% --- DATE ---
+		{\large\PaperDate}
+		
+		\vfill
+	\end{center}
+		% --- DOI / ISBN ---
+	
+		{\small
+		
+		
+		\noindent\PaperDOI\\
+	%	\PaperISBNPDF\\
+	\PaperISBNEPUB\\
+	\textit{Keywords:} \PaperKeywords
+		
+		}
+		
+	\end{titlepage}
+	
+	%\PaperMetadata
+	
+	\vspace{1em}
+	\hrule
+	\vspace{1em}
+	
+	\noindent\textbf{Abstract.}  
+	
+		This paper examines why the photon must be (almost) massless by combining 
+		theoretical arguments, empirical constraints, and the internal consistency 
+		of quantum electrodynamics. We begin by showing how the $U(1)$ gauge 
+		symmetry of electromagnetism forbids a mass term and why introducing a 
+		Proca mass would fundamentally alter Maxwell’s equations, electric-charge 
+		conservation, and the structure of electromagnetic fields. Astrophysical 
+		observations---from galactic magnetic fields to solar-system dynamics---set 
+		extremely tight upper limits on any possible photon mass, far below 
+		laboratory sensitivity.
+		
+		Quantum electrodynamics further requires a massless photon for 
+		renormalizability and the validity of the Ward--Takahashi identities. 
+		A central conceptual point is added by examining the helicity structure 
+		of entangled photons: the experimentally confirmed two-state behavior 
+		is only compatible with a massless spin-1 field. A massive photon would 
+		possess a longitudinal mode, leading to observable deviations in 
+		polarization correlations and Bell-type experiments---none of which are seen.
+		
+		Taken together, these arguments provide a coherent and compelling case 
+		that the photon is, to extraordinarily high precision, massless. The 
+		final section reflects on the distinction between ``exactly zero'' and 
+		``experimentally indistinguishable from zero'' and discusses the broader 
+		implications for fundamental physics.
+	
+	
+	
+	\vspace{1em}
+	\hrule
+	\vspace{2em}
+	
+	% =============================================================
+	% Main content
+	% =============================================================
+	
+	% Hauptkapitel
+	\include{chapters/chapter01}
+	\include{chapters/chapter02}
+	\include{chapters/chapter03}
+	\include{chapters/chapter04}
+	\include{chapters/chapter05}
+	\include{chapters/chapter06}
+	\include{chapters/chapter07}
+	\include{chapters/chapter08}
+	\include{chapters/chapter09}
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+
+	
+
+	
+	
+
+	\section*{Acknowledgments}
+	
+	This work was created in collaboration with modern AI-based tools 
+	(including ChatGPT) used as an intellectual co-pilot for structuring, 
+	language refinement, and iterative development. All scientific 
+	responsibility, physical reasoning, and final validation remain entirely 
+	with the author.
+	
+	
+	% =============================================================
+	% References
+	% =============================================================
+%\section*{Literatur}
+%\section*{References}
+	\renewcommand*{\bibfont}{\small}
+\printbibliography
+
+	
+	
+	
+	\noindent
+	\textbf{Open Access}\\
+	The \emph{free} PDF version is available at:\\[2pt]
+	\href{https://doi.org/10.5281/zenodo.xxxxxxx}{\texttt{https://doi.org/10.5281/zenodo.xxxxxxx}}
+	
+	\vspace{0.8cm}
+	
+	\noindent
+	\textbf{Series}\\
+%	\textit{Theoretical Physics – Derivations in Historical Context}\\
+	More papers and materials:\\
+	\href{https://mathandphysics.eu}{\texttt{mathandphysics.eu}}
+	
+	\vfill
+	
+	\noindent
+	\small
+	\textit{Bibliographic Information}\\
+	\PaperDOI\\
+%	\PaperISBNPDF\\
+	\PaperISBNEPUB
+	
+	\vspace{0.8cm}
+	
+	\noindent
+	\footnotesize
+	© 2025 Christian Weilharter — All rights reserved.\\
+	Printed on demand via Amazon KDP. Typeset in \LaTeX.
+	
+	\vfill
+	\begin{center}
+		\small
+		\textit{Math \& Physics Paper Series – Open Access at}\\[2pt]
+		\href{https://mathandphysics.eu}{\texttt{https://mathandphysics.eu}} \, | \,
+		\href{https://zenodo.org/communities/mathandphysics}{\texttt{Zenodo: Math \& Physics Open Science Collection}}
+	\end{center}
+	
+\end{document}

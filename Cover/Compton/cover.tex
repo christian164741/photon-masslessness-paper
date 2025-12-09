@@ -1,0 +1,46 @@
+\documentclass{article}
+
+% 6x9 inch, keine Ränder
+\usepackage[paperwidth=6in,paperheight=9in,margin=0pt]{geometry}
+
+\usepackage{graphicx}
+\usepackage{eso-pic}
+\usepackage{xcolor}
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\definecolor{coverwhite}{RGB}{250,250,250}
+
+\begin{document}
+	\thispagestyle{empty}
+	
+	% Hintergrundbild über die komplette Seite
+	\AddToShipoutPictureBG*{%
+		\AtPageLowerLeft{%
+			\includegraphics[width=\paperwidth,height=\paperheight]{hintergrund.png}%
+		}%
+	}
+	
+	\begin{center}
+		\vspace*{2.2cm}
+		
+		{\color{coverwhite}
+			{\fontsize{30pt}{34pt}\selectfont\bfseries Der Compton-Effekt\par}
+			\vspace{1.2em}
+			{\fontsize{16pt}{20pt}\selectfont Herleitung, Geschichte und Anwendungen\par}
+			
+			\vspace{4.5em}
+			{\fontsize{20pt}{24pt}\selectfont Christian Weilharter\par}
+			\vspace{0.8em}
+			{\fontsize{12pt}{16pt}\selectfont Christian \& Co-Pilot -- Math \& Physics\par}
+			
+		%	\vspace{2em}
+		%	{\fontsize{12pt}{14pt}\selectfont Version 1.0 -- Dezember 2025\par}
+			% Später:
+			% {\fontsize{12pt}{14pt}\selectfont DOI: 10.5281/zenodo.xxxxxxx\par}
+		}
+		
+	\end{center}
+	
+\end{document}
