@@ -1,3 +1,17 @@
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon and metadata files
+Icon?
+._*
+
+# Thumbnails
+ehthumbs.db
+Thumbs.db
+
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
@@ -319,6 +333,15 @@ TSWLatexianTemp*
 
 # xwatermark package
 *.xwm
+# Eigene PDF-Dateien nicht ins Repo (werden lokal erzeugt)
+*.pdf
+
+# Ausnahme: Cover-PNGs sollen im Repo bleiben (z. B. für Vorschau)
+de/cover/*.pdf
+en/cover/*.pdf
+!de/cover/*.png
+!en/cover/*.png
+
 
 # REVTeX puts footnotes in the bibliography by default, unless the nofootinbib
 # option is specified. Footnotes are the stored in a file with suffix Notes.bib.
